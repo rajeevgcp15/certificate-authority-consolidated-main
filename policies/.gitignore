@@ -1,0 +1,4 @@
+./encryption_gcp_cmek_enforce.sentinel.bkp2
+./encryption_gcp_cmek_enforce.sentinel.bkp
+./threat_gcp_data_configuration_restriction.sentinel.bkp
+./network_gcp_ssl_enforce.sentinel.bkp
