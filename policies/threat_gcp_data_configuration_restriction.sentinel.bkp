@@ -1,0 +1,178 @@
+# This policy enforces the validation of Recurrence Period, Dataset Id of DLP Job Trigger and Security Settings for Dialogflow
+# These sentinel policies enforce Wells Fargo security principles
+
+# Import tfplan-functions.sentinel
+# with alias "plan"
+import "tfplan-functions" as plan
+import "generic-functions" as gen
+import "strings"
+import "types"
+
+//**********************Variables to be used***********************************
+selected_node = null
+messages = {}
+
+//******Resource Types*********************************************************
+//******Job Trigger Param Map***
+resourceTypesDLPJTMap = {
+	"google_data_loss_prevention_job_trigger": {
+		"key": "triggers.0.schedule.0.recurrence_period_duration",
+	},
+}
+
+//******Save Findings Param Map***
+resourceTypesDLPSFMap = {
+	"google_data_loss_prevention_job_trigger": {
+		"key":         "inspect_job.0.actions.0.save_findings.0.output_config.0.table.0.dataset_id",
+		"inspect_key": "inspect_job",
+	},
+}
+
+//*****************************************************************************
+
+//******Following function is being used to validate the DLP job triggers**
+//as per the GCP resource's requirement
+//address is the key and rc is the value of resource_changes in the mock of tfplan-v2 file
+
+check_job_trigger = func(address, rc, resource) {
+
+	key = resourceTypesDLPJTMap[rc.type]["key"]
+
+	selected_node = plan.evaluate_attribute(rc, key)
+
+	if types.type_of(selected_node) is "null" {
+		return plan.to_string(address) + " does not have " + key + " defined"
+	} else {
+
+		result = strings.has_suffix(selected_node, "s")
+
+		min_val = 86400
+		max_val = 86400 * 60
+
+		if selected_node is not "" and result is true {
+			str_value = strings.split(selected_node, "s")[0]
+
+			if float(str_value) >= float(min_val) and float(str_value) <= float(max_val) {
+				return null
+			} else {
+				return plan.to_string(address) + " recurrence_period_duration must be set to a time duration greater than or equal to 1 day and can be no longer than 60 days."
+			}
+		} else {
+			return plan.to_string(address) + " recurrence_period_duration is not having valid input, please provide correctly"
+		}
+	}
+}
+
+//******Following function is being used to validate the internal ip settings**
+//as per the GCP resource's requirement
+//address is the key and rc is the value of resource_changes in the mock of tfplan-v2 file
+
+check_save_findings = func(address, rc) {
+
+	key = resourceTypesDLPSFMap[rc.type]["inspect_key"]
+	selected_node = plan.evaluate_attribute(rc, key)
+
+	if selected_node is [] {
+		return plan.to_string(address) + " does not have " + key + " defined"
+	} else {
+
+		key = resourceTypesDLPSFMap[rc.type]["key"]
+		selected_node = plan.evaluate_attribute(rc, key)
+
+		if selected_node is not "" {
+			return null
+		} else {
+			return plan.to_string(address) + " dataset id is not having valid input, please provide correctly"
+		}
+	}
+}
+
+//*****************validating recurrence period duration in triggers block only
+messages_trigger = {}
+
+for resourceTypesDLPJTMap as key_address, _ {
+	# Get all the instances on the basis of type
+	allResources = plan.find_resources(key_address)
+	for allResources as address, rc {
+		message = null
+		message = check_job_trigger(address, rc, {address: rc})
+
+		if types.type_of(message) is not "null" {
+
+			gen.create_sub_main_key_list(messages, messages_trigger, address)
+
+			append(messages_trigger[address], message)
+			append(messages[address], message)
+		}
+	}
+}
+
+//*****************************************************************************
+
+//*******************validating dataset id*************************************
+messages_save_findings = {}
+
+for resourceTypesDLPSFMap as key_address, _ {
+	# Get all the instances on the basis of type
+	allResources = plan.find_resources(key_address)
+	for allResources as address, rc {
+		message = null
+		message = check_save_findings(address, rc)
+
+		if types.type_of(message) is not "null" {
+
+			gen.create_sub_main_key_list(messages, messages_save_findings, address)
+
+			append(messages_save_findings[address], message)
+			append(messages[address], message)
+		}
+	}
+}
+
+//*****************************************************************************
+
+# Get all dialogflow Resources
+all_df_Resources = plan.find_resources("google_dialogflow_cx_agent")
+
+dlp_messages = {}
+for all_df_Resources as address, rc {
+	dlp_security = plan.evaluate_attribute(rc.change.after, "security_settings")
+
+	is_dlp_security_null = rule { types.type_of(dlp_security) is "null" }
+
+	if is_dlp_security_null is true {
+
+		dlp_messages[address] = rc
+		print(" security_settings with value null is not allowed ")
+
+	} else {
+
+		if dlp_security is not null {
+			print("The value for google_dialogflow_cx_agent.security_settings is " + dlp_security)
+
+		} else {
+
+			dlp_messages[address] = rc
+			print("Please enter correct value for parameter security_settings in google_dialogflow_cx_agent !!!")
+
+		}
+	}
+
+}
+
+GCP_DIALOGFLOW_DLP = rule {
+	length(dlp_messages) is 0
+}
+
+GCP_DLP_TRIGGER = rule {
+	length(messages_trigger) is 0
+}
+
+GCP_DLP_SAVEFINDINGS = rule {
+	length(messages_save_findings) is 0
+}
+
+# Main rule
+print(messages)
+
+main = rule { GCP_DLP_TRIGGER and GCP_DLP_SAVEFINDINGS and GCP_DIALOGFLOW_DLP }
