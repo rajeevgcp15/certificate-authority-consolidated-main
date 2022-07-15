@@ -182,7 +182,7 @@ GCP_DLP_SAVEFINDINGS = rule {
 #====================================================================#
 #====================================================================#
 bucket_map_state = []
-# get all storage buckets in tfplan
+# get all storage buckets in tfstate
 find_resources = func(type) {
 	resources = filter tfstate2.resources as address, r {
 		r.type is type
