@@ -1,541 +1,7 @@
 {
 	"records": [
 		{
-			"key": "test/network_gcp_ssl_enforce/failure_privateca_ca_pool_expression_policy/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/gcp_cas_caroothsm_pass/generic-functions",
-			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
-		},
-		{
 			"key": "test/encryption_gcp_algo_enforce/failure_privateca_devopsalg_notvalidalg/tfstate-functions",
-			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/gcp_cas_caroothsm_ver_temp_null/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/google_storage_bucket_null/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/google_bigquery_dataset_pass/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/threat_gcp_data_configuration_restriction/null/tfstate-functions",
-			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/gcp_cas_caroothsm_fail/tfstate-functions",
-			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/google_dataproc_cluster_null/generic-functions",
-			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/gcp_cas_caentcmek_null/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/google_pubsub_topic_fail/generic-functions",
-			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
-		},
-		{
-			"key": "test/threat_gcp_data_configuration_restriction/pass/generic-functions",
-			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
-		},
-		{
-			"key": "test/threat_gcp_data_configuration_restriction/failure-gcp_dlp_save_findings/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/threat_gcp_data_configuration_restriction/gcp_cas_custombucket_fail/tfstate-functions",
-			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/google_storage_bucket_pass/generic-functions",
-			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
-		},
-		{
-			"key": "test/network_gcp_ssl_enforce/success-gdc-dp-http/generic-functions",
-			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
-		},
-		{
-			"key": "test/threat_gcp_data_configuration_restriction/success-gcp_dlp_save_findings/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/gcp_cas_caroothsm_pass/tfstate-functions",
-			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
-		},
-		{
-			"key": "test/threat_gcp_data_configuration_restriction/success-gcp_dlp_save_findings/tfstate-functions",
-			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/gcp_cas_caroothsm_ca_key_spec_cloud_kms_version_null/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/threat_gcp_data_configuration_restriction/null/generic-functions",
-			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
-		},
-		{
-			"key": "test/network_gcp_ssl_enforce/success_privateca_ca_pool_policy/generic-functions",
-			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/google_dataproc_cluster_null/tfstate-functions",
-			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
-		},
-		{
-			"key": "test/threat_gcp_data_configuration_restriction/failure-gcp_dlp_trigger/generic-functions",
-			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/gcp_cas_caroothsm_ca_key_spec_cloud_kms_version_null/generic-functions",
-			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/dataflow-kms-fail/tfstate-functions",
-			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/gcp_cas_caentcmek_pass/tfstate-functions",
-			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_algo_enforce/gcp_cas_caentalg_fail/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/threat_gcp_data_configuration_restriction/gcp_cas_custombucket_invalid_bucket/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_algo_enforce/success_privateca_certificate_authority_policy/tfstate-functions",
-			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/google_bigquery_dataset_fail/tfstate-functions",
-			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
-		},
-		{
-			"key": "test/threat_gcp_data_configuration_restriction/success-gcp_dlp_save_findings/generic-functions",
-			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/google_storage_bucket_fail/generic-functions",
-			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
-		},
-		{
-			"key": "test/network_gcp_ssl_enforce/success-gdc-dp-http/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_algo_enforce/failure_privateca_devopsalg_alg_empty/tfstate-functions",
-			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
-		},
-		{
-			"key": "test/threat_gcp_data_configuration_restriction/gcp_cas_custombucket_invalid_bucket/generic-functions",
-			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/google_secret_manager_secret_pass/generic-functions",
-			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/google_secret_manager_secret_fail/generic-functions",
-			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/google_secret_manager_secret_fail/tfstate-functions",
-			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/gcp_cas_caroothsm_ca_key_spec_cloud_kms_version_null/tfstate-functions",
-			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/google_pubsub_topic_pass/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/dataflow-kms-fail/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/google_secret_manager_secret_null/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/threat_gcp_data_configuration_restriction/gcp_cas_custombucket_pass/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/threat_gcp_data_configuration_restriction/failure-gcp_dlp_trigger/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/gce-kms_key_name-fail/generic-functions",
-			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
-		},
-		{
-			"key": "test/threat_gcp_data_configuration_restriction/fail/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/gcp_cas_caentcmek_null/generic-functions",
-			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_algo_enforce/success_privateca_certificate_authority_policy/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_algo_enforce/gcp_cas_caentalg_null/tfstate-functions",
-			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/google_dataproc_cluster_pass/generic-functions",
-			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/gce-kms_key_name-fail/tfstate-functions",
-			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
-		},
-		{
-			"key": "test/threat_gcp_data_configuration_restriction/success-gcp_dlp_trigger/generic-functions",
-			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/dataflow-kms-pass/tfstate-functions",
-			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_algo_enforce/success_privateca_devopsalg/tfstate-functions",
-			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
-		},
-		{
-			"key": "test/network_gcp_ssl_enforce/failure_privateca_ca_pool_expression_policy/generic-functions",
-			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/google_dataproc_cluster_null/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/google_secret_manager_secret_pass/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/threat_gcp_data_configuration_restriction/gcp_cas_custombucket_fail/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/threat_gcp_data_configuration_restriction/fail/generic-functions",
-			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
-		},
-		{
-			"key": "test/network_gcp_ssl_enforce/failure_privateca_ca_pool_issue_block_policy/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/gcp_cas_caroothsm_ver_temp_null/generic-functions",
-			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
-		},
-		{
-			"key": "test/threat_gcp_data_configuration_restriction/null-gcp_dlp_save_findings/generic-functions",
-			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_algo_enforce/failure_privateca_devopsalg_alg_notspecified/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/threat_gcp_data_configuration_restriction/null-gcp_dlp_trigger/tfstate-functions",
-			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/gcp_cas_caroothsm_protection_level_null/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/network_gcp_ssl_enforce/failure-gdc-dp-http/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/google_pubsub_topic_null/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/threat_gcp_data_configuration_restriction/null-gcp_dlp_save_findings/tfstate-functions",
-			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/gce-kms_key_name-fail/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/threat_gcp_data_configuration_restriction/success-gcp_dlp_trigger/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/gcp_cas_caroothsm_fail/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/google_bigquery_dataset_null/generic-functions",
-			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
-		},
-		{
-			"key": "test/threat_gcp_data_configuration_restriction/fail/tfstate-functions",
-			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/gcp_cas_caentcmek_fail/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/google_pubsub_topic_pass/tfstate-functions",
-			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
-		},
-		{
-			"key": "test/network_gcp_ssl_enforce/null_privateca_ca_pool_issue_block_policy/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/gce-kms_key_name-pass/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/gce-kms_key_name-pass/tfstate-functions",
-			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/google_bigquery_dataset_fail/generic-functions",
-			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/google_pubsub_topic_fail/tfstate-functions",
-			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/gcp_cas_caentcmek_null/tfstate-functions",
-			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/google_storage_bucket_pass/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/google_storage_bucket_fail/tfstate-functions",
-			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_algo_enforce/failure_privateca_devopsalg_alg_notspecified/tfstate-functions",
-			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
-		},
-		{
-			"key": "test/threat_gcp_data_configuration_restriction/failure-gcp_dlp_save_findings/generic-functions",
-			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
-		},
-		{
-			"key": "test/threat_gcp_data_configuration_restriction/gcp_cas_custombucket_pass/generic-functions",
-			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/gcp_cas_caroothsm_protection_level_null/tfstate-functions",
-			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/gcp_cas_caentcmek_pass/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/google_dataproc_cluster_fail/tfstate-functions",
 			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
 			"sourceSum": "",
 			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
@@ -547,199 +13,61 @@
 			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
 		},
 		{
-			"key": "test/encryption_gcp_algo_enforce/failure_privateca_devopsalg_alg_empty/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/threat_gcp_data_configuration_restriction/failure-gcp_dlp_save_findings/tfstate-functions",
-			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/google_bigquery_dataset_null/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/google_storage_bucket_pass/tfstate-functions",
-			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/google_pubsub_topic_fail/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_algo_enforce/gcp_cas_caentalg_pass/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/gcp_cas_caroothsm_protection_level_null/generic-functions",
-			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
-		},
-		{
-			"key": "test/threat_gcp_data_configuration_restriction/gcp_cas_custombucket_null/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/threat_gcp_data_configuration_restriction/null-gcp_dlp_trigger/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/network_gcp_ssl_enforce/null_privateca_ca_pool_issue_block_policy/generic-functions",
-			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
-		},
-		{
 			"key": "test/encryption_gcp_cmek_enforce/google_secret_manager_secret_null/tfstate-functions",
 			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
 			"sourceSum": "",
 			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
 		},
 		{
-			"key": "test/threat_gcp_data_configuration_restriction/gcp_cas_custombucket_null/generic-functions",
+			"key": "test/threat_gcp_data_configuration_restriction/success-gcp_dlp_trigger/generic-functions",
 			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
 			"sourceSum": "",
 			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
 		},
 		{
-			"key": "test/encryption_gcp_cmek_enforce/google_secret_manager_secret_pass/tfstate-functions",
-			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
-		},
-		{
-			"key": "test/threat_gcp_data_configuration_restriction/pass/tfstate-functions",
-			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/google_secret_manager_secret_null/generic-functions",
-			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
-		},
-		{
-			"key": "test/threat_gcp_data_configuration_restriction/failure-gcp_dlp_trigger/tfstate-functions",
-			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/gcp_cas_caroothsm_fail/generic-functions",
-			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
-		},
-		{
-			"key": "test/threat_gcp_data_configuration_restriction/gcp_cas_custombucket_pass/tfstate-functions",
-			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/dataflow-kms-pass/generic-functions",
-			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/google_bigquery_dataset_null/tfstate-functions",
-			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
-		},
-		{
-			"key": "test/network_gcp_ssl_enforce/failure_privateca_ca_pool_issue_block_policy/generic-functions",
-			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/google_dataproc_cluster_pass/tfstate-functions",
-			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
-		},
-		{
-			"key": "test/network_gcp_ssl_enforce/success_privateca_ca_pool_policy/tfplan-functions",
+			"key": "test/encryption_gcp_algo_enforce/failure_privateca_devopsalg_alg_empty/tfplan-functions",
 			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
 			"sourceSum": "",
 			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
 		},
 		{
-			"key": "test/encryption_gcp_cmek_enforce/dataflow-kms-fail/generic-functions",
-			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/google_pubsub_topic_null/generic-functions",
-			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
-		},
-		{
-			"key": "test/threat_gcp_data_configuration_restriction/gcp_cas_custombucket_null/tfstate-functions",
-			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/gcp_cas_caentcmek_fail/generic-functions",
-			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/google_dataproc_cluster_fail/generic-functions",
-			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
-		},
-		{
-			"key": "test/threat_gcp_data_configuration_restriction/gcp_cas_custombucket_fail/generic-functions",
-			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
-		},
-		{
-			"key": "test/threat_gcp_data_configuration_restriction/pass/tfplan-functions",
+			"key": "test/encryption_gcp_cmek_enforce/gce-kms_key_name-pass/tfplan-functions",
 			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
 			"sourceSum": "",
 			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
 		},
 		{
-			"key": "test/threat_gcp_data_configuration_restriction/null/tfplan-functions",
+			"key": "test/encryption_gcp_algo_enforce/failure_privateca_devopsalg_notvalidalg/tfplan-functions",
 			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
 			"sourceSum": "",
 			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
 		},
 		{
-			"key": "test/encryption_gcp_cmek_enforce/google_pubsub_topic_null/tfstate-functions",
+			"key": "test/encryption_gcp_cmek_enforce/gcp_cas_caroothsm_ca_key_spec_cloud_kms_version_null/generic-functions",
+			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/gcp_cas_caroothsm_ca_key_spec_cloud_kms_version_null/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/threat_gcp_data_configuration_restriction/null-gcp_dlp_save_findings/tfstate-functions",
 			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
 			"sourceSum": "",
 			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
 		},
 		{
-			"key": "test/encryption_gcp_cmek_enforce/gcp_cas_caentcmek_fail/tfstate-functions",
+			"key": "test/encryption_gcp_cmek_enforce/google_storage_bucket_pass/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/threat_gcp_data_configuration_restriction/gcp_cas_custombucket_fail/tfstate-functions",
 			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
 			"sourceSum": "",
 			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
@@ -751,25 +79,37 @@
 			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
 		},
 		{
-			"key": "test/encryption_gcp_cmek_enforce/google_storage_bucket_null/tfstate-functions",
-			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/gcp_cas_caroothsm_pass/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/google_pubsub_topic_pass/generic-functions",
+			"key": "test/encryption_gcp_cmek_enforce/gcp_cas_caentcmek_pass/generic-functions",
 			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
 			"sourceSum": "",
 			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
 		},
 		{
-			"key": "test/encryption_gcp_cmek_enforce/google_storage_bucket_fail/tfplan-functions",
+			"key": "test/encryption_gcp_cmek_enforce/google_pubsub_topic_null/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/network_gcp_ssl_enforce/success_privateca_ca_pool_policy/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/dataflow-kms-fail/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/threat_gcp_data_configuration_restriction/fail/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/gcp_cas_caroothsm_ver_temp_null/tfplan-functions",
 			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
 			"sourceSum": "",
 			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
@@ -781,70 +121,34 @@
 			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
 		},
 		{
-			"key": "test/threat_gcp_data_configuration_restriction/null-gcp_dlp_trigger/generic-functions",
+			"key": "test/threat_gcp_data_configuration_restriction/pass/generic-functions",
 			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
 			"sourceSum": "",
 			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
 		},
 		{
-			"key": "test/encryption_gcp_cmek_enforce/google_storage_bucket_null/generic-functions",
-			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/google_bigquery_dataset_pass/generic-functions",
-			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_algo_enforce/failure_privateca_devopsalg_notvalidalg/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/google_dataproc_cluster_pass/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_algo_enforce/success_privateca_devopsalg/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/threat_gcp_data_configuration_restriction/success-gcp_dlp_trigger/tfstate-functions",
+			"key": "test/encryption_gcp_cmek_enforce/google_bigquery_dataset_null/tfstate-functions",
 			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
 			"sourceSum": "",
 			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
 		},
 		{
-			"key": "test/encryption_gcp_cmek_enforce/google_secret_manager_secret_fail/tfplan-functions",
+			"key": "test/threat_gcp_data_configuration_restriction/failure-gcp_dlp_trigger/tfplan-functions",
 			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
 			"sourceSum": "",
 			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
 		},
 		{
-			"key": "test/network_gcp_ssl_enforce/null_privateca_ca_pool_expression_policy/generic-functions",
-			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/google_bigquery_dataset_fail/tfplan-functions",
+			"key": "test/encryption_gcp_cmek_enforce/google_dataproc_cluster_null/tfplan-functions",
 			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
 			"sourceSum": "",
 			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
 		},
 		{
-			"key": "test/encryption_gcp_cmek_enforce/google_dataproc_cluster_fail/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"key": "test/threat_gcp_data_configuration_restriction/failure-gcp_dlp_save_findings/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
 			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
 		},
 		{
 			"key": "test/network_gcp_ssl_enforce/null_privateca_ca_pool_expression_policy/tfplan-functions",
@@ -853,31 +157,151 @@
 			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
 		},
 		{
+			"key": "test/encryption_gcp_cmek_enforce/google_storage_bucket_null/generic-functions",
+			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/dataflow-kms-fail/generic-functions",
+			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/google_dataproc_cluster_pass/generic-functions",
+			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
+		},
+		{
+			"key": "test/threat_gcp_data_configuration_restriction/gcp_cas_custombucket_pass/generic-functions",
+			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/gce-kms_key_name-fail/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/google_secret_manager_secret_fail/generic-functions",
+			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_algo_enforce/failure_privateca_devopsalg_alg_notspecified/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
 			"key": "test/encryption_gcp_cmek_enforce/gcp_cas_caroothsm_ver_temp_null/tfstate-functions",
 			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
 			"sourceSum": "",
 			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
 		},
 		{
-			"key": "test/threat_gcp_data_configuration_restriction/null-gcp_dlp_save_findings/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_algo_enforce/gcp_cas_caentalg_null/tfplan-functions",
-			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
-			"sourceSum": "",
-			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
-		},
-		{
-			"key": "test/encryption_gcp_cmek_enforce/gcp_cas_caentcmek_pass/generic-functions",
+			"key": "test/encryption_gcp_cmek_enforce/google_dataproc_cluster_fail/generic-functions",
 			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
 			"sourceSum": "",
 			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
 		},
 		{
-			"key": "test/encryption_gcp_cmek_enforce/gce-kms_key_name-pass/generic-functions",
+			"key": "test/encryption_gcp_cmek_enforce/gcp_cas_caroothsm_pass/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/threat_gcp_data_configuration_restriction/pass/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/gcp_cas_caentcmek_fail/generic-functions",
+			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
+		},
+		{
+			"key": "test/threat_gcp_data_configuration_restriction/success-gcp_dlp_trigger/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/google_storage_bucket_fail/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/google_pubsub_topic_null/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/google_dataproc_cluster_null/generic-functions",
+			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/google_dataproc_cluster_pass/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/google_bigquery_dataset_pass/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_algo_enforce/success_privateca_certificate_authority_policy/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/threat_gcp_data_configuration_restriction/failure-gcp_dlp_save_findings/generic-functions",
+			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/google_secret_manager_secret_null/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/threat_gcp_data_configuration_restriction/failure-gcp_dlp_trigger/generic-functions",
+			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
+		},
+		{
+			"key": "test/threat_gcp_data_configuration_restriction/gcp_cas_custombucket_pass/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/gcp_cas_caroothsm_pass/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/google_storage_bucket_pass/generic-functions",
 			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
 			"sourceSum": "",
 			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
@@ -889,13 +313,589 @@
 			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
 		},
 		{
-			"key": "test/encryption_gcp_cmek_enforce/google_bigquery_dataset_pass/tfstate-functions",
+			"key": "test/encryption_gcp_cmek_enforce/gcp_cas_caroothsm_fail/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/google_bigquery_dataset_fail/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/threat_gcp_data_configuration_restriction/success-gcp_dlp_save_findings/generic-functions",
+			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/gcp_cas_caentcmek_pass/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/network_gcp_ssl_enforce/null_privateca_ca_pool_expression_policy/generic-functions",
+			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/google_storage_bucket_fail/generic-functions",
+			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/gcp_cas_caroothsm_protection_level_null/tfstate-functions",
 			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
 			"sourceSum": "",
 			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
 		},
 		{
 			"key": "test/network_gcp_ssl_enforce/failure-gdc-dp-http/generic-functions",
+			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
+		},
+		{
+			"key": "test/network_gcp_ssl_enforce/success_privateca_ca_pool_policy/generic-functions",
+			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/gce-kms_key_name-pass/generic-functions",
+			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/gcp_cas_caroothsm_fail/generic-functions",
+			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
+		},
+		{
+			"key": "test/threat_gcp_data_configuration_restriction/null/generic-functions",
+			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/google_storage_bucket_pass/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/network_gcp_ssl_enforce/success-gdc-dp-http/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/gcp_cas_caentcmek_fail/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/threat_gcp_data_configuration_restriction/null-gcp_dlp_save_findings/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/gce-kms_key_name-fail/generic-functions",
+			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
+		},
+		{
+			"key": "test/threat_gcp_data_configuration_restriction/null-gcp_dlp_trigger/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/google_bigquery_dataset_null/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/network_gcp_ssl_enforce/failure_privateca_ca_pool_expression_policy/generic-functions",
+			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
+		},
+		{
+			"key": "test/network_gcp_ssl_enforce/failure-gdc-dp-http/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/network_gcp_ssl_enforce/failure_privateca_ca_pool_expression_policy/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/threat_gcp_data_configuration_restriction/success-gcp_dlp_save_findings/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/google_pubsub_topic_pass/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/threat_gcp_data_configuration_restriction/fail/generic-functions",
+			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/dataflow-kms-fail/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/threat_gcp_data_configuration_restriction/null-gcp_dlp_save_findings/generic-functions",
+			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
+		},
+		{
+			"key": "test/threat_gcp_data_configuration_restriction/null/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/google_dataproc_cluster_pass/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/google_dataproc_cluster_null/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_algo_enforce/gcp_cas_caentalg_pass/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/google_pubsub_topic_fail/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_algo_enforce/failure_privateca_devopsalg_alg_notspecified/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_algo_enforce/gcp_cas_caentalg_null/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/gce-kms_key_name-pass/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/network_gcp_ssl_enforce/null_privateca_ca_pool_issue_block_policy/generic-functions",
+			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_algo_enforce/success_privateca_devopsalg/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_algo_enforce/success_privateca_devopsalg/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/threat_gcp_data_configuration_restriction/null/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/threat_gcp_data_configuration_restriction/success-gcp_dlp_trigger/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/threat_gcp_data_configuration_restriction/gcp_cas_custombucket_invalid_bucket/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/google_dataproc_cluster_fail/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/gcp_cas_caentcmek_fail/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/threat_gcp_data_configuration_restriction/null-gcp_dlp_trigger/generic-functions",
+			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/google_secret_manager_secret_pass/generic-functions",
+			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/google_bigquery_dataset_pass/generic-functions",
+			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
+		},
+		{
+			"key": "test/network_gcp_ssl_enforce/success-gdc-dp-http/generic-functions",
+			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/google_storage_bucket_null/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/google_bigquery_dataset_null/generic-functions",
+			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
+		},
+		{
+			"key": "test/threat_gcp_data_configuration_restriction/failure-gcp_dlp_trigger/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/threat_gcp_data_configuration_restriction/gcp_cas_custombucket_invalid_bucket/generic-functions",
+			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
+		},
+		{
+			"key": "test/threat_gcp_data_configuration_restriction/gcp_cas_custombucket_fail/generic-functions",
+			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/google_secret_manager_secret_pass/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/network_gcp_ssl_enforce/failure_privateca_ca_pool_issue_block_policy/generic-functions",
+			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_algo_enforce/success_privateca_certificate_authority_policy/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/threat_gcp_data_configuration_restriction/fail/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/threat_gcp_data_configuration_restriction/gcp_cas_custombucket_fail/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/google_pubsub_topic_fail/generic-functions",
+			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/dataflow-kms-pass/generic-functions",
+			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/gcp_cas_caentcmek_null/generic-functions",
+			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/google_dataproc_cluster_fail/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/gcp_cas_caroothsm_ca_key_spec_cloud_kms_version_null/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/threat_gcp_data_configuration_restriction/gcp_cas_custombucket_null/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/gcp_cas_caroothsm_protection_level_null/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/gcp_cas_caroothsm_protection_level_null/generic-functions",
+			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/gcp_cas_caroothsm_fail/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_algo_enforce/gcp_cas_caentalg_fail/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/gcp_cas_caentcmek_null/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/gcp_cas_caentcmek_null/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_algo_enforce/failure_privateca_devopsalg_alg_empty/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/google_secret_manager_secret_fail/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/google_bigquery_dataset_fail/generic-functions",
+			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
+		},
+		{
+			"key": "test/network_gcp_ssl_enforce/failure_privateca_ca_pool_issue_block_policy/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/threat_gcp_data_configuration_restriction/gcp_cas_custombucket_null/generic-functions",
+			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/google_pubsub_topic_pass/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/google_pubsub_topic_fail/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/google_secret_manager_secret_null/generic-functions",
+			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
+		},
+		{
+			"key": "test/threat_gcp_data_configuration_restriction/gcp_cas_custombucket_pass/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/google_bigquery_dataset_pass/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/google_pubsub_topic_null/generic-functions",
+			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
+		},
+		{
+			"key": "test/threat_gcp_data_configuration_restriction/gcp_cas_custombucket_null/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/threat_gcp_data_configuration_restriction/failure-gcp_dlp_save_findings/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/threat_gcp_data_configuration_restriction/null-gcp_dlp_trigger/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/threat_gcp_data_configuration_restriction/success-gcp_dlp_save_findings/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/gce-kms_key_name-fail/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/threat_gcp_data_configuration_restriction/pass/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/network_gcp_ssl_enforce/null_privateca_ca_pool_issue_block_policy/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/google_storage_bucket_null/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/google_bigquery_dataset_fail/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/gcp_cas_caentcmek_pass/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_algo_enforce/gcp_cas_caentalg_null/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/gcp_cas_caroothsm_ver_temp_null/generic-functions",
+			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/gcp_cas_caroothsm_pass/generic-functions",
+			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/dataflow-kms-pass/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/google_storage_bucket_fail/tfplan-functions",
+			"source": "../../../common-functions/tfplan-functions/tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfplan-functions/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/google_secret_manager_secret_pass/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/google_secret_manager_secret_fail/tfstate-functions",
+			"source": "../../../common-functions/tfstate-functions/tfstate-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/tfstate-functions/tfstate-functions.sentinel"
+		},
+		{
+			"key": "test/encryption_gcp_cmek_enforce/google_pubsub_topic_pass/generic-functions",
 			"source": "../../../common-functions/generic-functions/generic-functions.sentinel",
 			"sourceSum": "",
 			"dest": "/home/rajeevghosh/WELLS-PHASE3/14july/certificate-authority-consolidated-main/common-functions/generic-functions/generic-functions.sentinel"
