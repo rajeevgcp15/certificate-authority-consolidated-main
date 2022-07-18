@@ -3,6 +3,7 @@ import "generic-functions" as gen
 import "strings"
 import "types"
 
+
 //******Resource Types SSL Enforce Param Map***********************************
 resourceTypesSSLEnforceMap = {
 	"google_dataproc_cluster": {
@@ -73,15 +74,15 @@ allPrivatecaCAPoolInstances = plan.find_resources("google_privateca_ca_pool")
 violations_ca_pool_issuance_policy = {}
 for allPrivatecaCAPoolInstances as address, rc {
 	ca_pool_issuance_policy = plan.evaluate_attribute(rc, "issuance_policy")
-	if types.type_of(ca_pool_issuance_policy) is "undefined" or types.type_of(ca_pool_issuance_policy) is "null" {
+    if types.type_of(ca_pool_issuance_policy) is "undefined" or types.type_of(ca_pool_issuance_policy) is "null" {
 		violations_ca_pool_issuance_policy[address] = rc
-		print("The value for ca_pool_issuance_policy in Resource " + address + " can't be null or undefined")
-	} else {
+		print("The value for ca_pool_issuance_policy in Resource " + address + " can't be null or undefined")	
+	}else {
 		if length(ca_pool_issuance_policy) == 0 {
 			violations_ca_pool_issuance_policy[address] = rc
-			print("Length of ca_pool_issuance_policy in Resource " + address + " must be greater then zero")
+			print("Length of ca_pool_issuance_policy in Resource " + address + " must be greater then zero")		
 		}
-	}
+    }
 }
 
 GCP_CAS_ISSUANCEPOLICY = rule { length(violations_ca_pool_issuance_policy) is 0 }
@@ -91,15 +92,15 @@ GCP_CAS_ISSUANCEPOLICY = rule { length(violations_ca_pool_issuance_policy) is 0 
 violations_cel_expression = {}
 for allPrivatecaCAPoolInstances as address, rc {
 	ca_pool_cel_expression = plan.evaluate_attribute(rc, "issuance_policy.0.identity_constraints.0.cel_expression.0.expression")
-	if types.type_of(ca_pool_cel_expression) is "undefined" or types.type_of(ca_pool_cel_expression) is "null" {
+    if types.type_of(ca_pool_cel_expression) is "undefined" or types.type_of(ca_pool_cel_expression) is "null" {
 		violations_cel_expression[address] = rc
-		print("The value for ca_pool_cel_expression in Resource " + address + " can't be null or undefined")
-	} else {
+		print("The value for ca_pool_cel_expression in Resource " + address + " can't be null or undefined")	
+	}else {
 		if length(ca_pool_cel_expression) == 0 {
 			violations_cel_expression[address] = rc
-			print("Length of ca_pool_cel_expression in Resource " + address + " must be greater then zero")
+			print("Length of ca_pool_cel_expression in Resource " + address + " must be greater then zero")		
 		}
-	}
+    }
 }
 
 GCP_CAS_ISSUANCEPOLICYCEL = rule { length(violations_cel_expression) is 0 }

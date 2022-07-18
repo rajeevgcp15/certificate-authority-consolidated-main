@@ -177,11 +177,11 @@ GCP_DLP_SAVEFINDINGS = rule {
 # Main rule
 //print(messages)
 
+
 #====================================================================#
 #====================================================================#
 #====================================================================#
 bucket_map_state = []
-
 # get all storage buckets in tfstate
 find_resources = func(type) {
 	resources = filter tfstate2.resources as address, r {
@@ -192,44 +192,43 @@ find_resources = func(type) {
 }
 allTfstatebuckets = find_resources("google_storage_bucket")
 
-//print(allTfstatebuckets)
-
 for allTfstatebuckets as address, rc {
-	bucket_tfstate = tfstate.evaluate_attribute(rc, "name")
-	append(bucket_map_state, bucket_tfstate)
+    bucket_tfstate = tfstate.evaluate_attribute(rc, "name")
+    append(bucket_map_state,bucket_tfstate)
 }
 print(bucket_map_state)
 
-# get all storage buckets in tfplan
 allTfplanbuckets = plan.find_resources("google_storage_bucket")
 
 for allTfplanbuckets as address, rc {
-	bucket_tfplan = plan.evaluate_attribute(rc, "name")
-	append(bucket_map_state, bucket_tfplan)
+    bucket_tfplan = plan.evaluate_attribute(rc, "name")
+    append(bucket_map_state,bucket_tfplan)
 }
 print(bucket_map_state)
 
-# get all certificate authority instances from tfplan
+# get all storage buckets in tfstate
+
+# Get all Composer Instances
 allCertAuthorityInstances = plan.find_resources("google_privateca_certificate_authority")
 
 messgages_ca_gcs_bucket = {}
 for allCertAuthorityInstances as address, rc {
-	ca_gcs_bucket = plan.evaluate_attribute(rc, "gcs_bucket")
-	print(ca_gcs_bucket)
-	//print(types.type_of(ca_gcs_bucket))
-	if (types.type_of(ca_gcs_bucket) == "null" or types.type_of(ca_gcs_bucket) == "undefined") {
-		print("Please define gcs_bucket name for resource: " + address)
-		messgages_ca_gcs_bucket[address] = rc
-	} else {
-		if ca_gcs_bucket not in bucket_map_state {
-			print("The gcs_bucket name  provided for resource: " + address + "   doesn't exist")
-			messgages_ca_gcs_bucket[address] = rc
+    ca_gcs_bucket = plan.evaluate_attribute(rc,"gcs_bucket")
+    print(ca_gcs_bucket)
+    //print(types.type_of(ca_gcs_bucket))
+    if (types.type_of(ca_gcs_bucket) == "null" or types.type_of(ca_gcs_bucket) == "undefined") {
+        print("Please define gcs_bucket name for resource: "+address)
+        messgages_ca_gcs_bucket[address] = rc
+    } else {
+        if ca_gcs_bucket not in bucket_map_state {
+            print("The gcs_bucket name  provided for resource: "+address+ "   doesn't exist")
+            messgages_ca_gcs_bucket[address] = rc
 
-		}
-	}
+        }
+    }
 
 }
 
-GCP_CAS_CUSTOMBUCKET = rule { length(messgages_ca_gcs_bucket) is 0 }
+GCP_CAS_CUSTOMBUCKET = rule {length(messgages_ca_gcs_bucket) is 0}
 
 main = rule { GCP_DLP_TRIGGER and GCP_DLP_SAVEFINDINGS and GCP_DIALOGFLOW_DLP and GCP_CAS_CUSTOMBUCKET }

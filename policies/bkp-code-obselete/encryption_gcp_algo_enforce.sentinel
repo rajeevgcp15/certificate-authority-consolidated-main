@@ -7,7 +7,7 @@ import "strings"
 import "types"
 
 ## Global Values for GCP_CAS_CADEVOPSALG starts here ###
-allowed_algorithms_ca_spec = ["RSA_PSS_2048_SHA256", "RSA_PSS_3072_SHA256", "RSA_PSS_4096_SHA256", "RSA_PKCS1_2048_SHA256", "RSA_PKCS1_3072_SHA256", "RSA_PKCS1_4096_SHA256"]
+allowed_algorithms_ca_spec= ["RSA_PSS_2048_SHA256","RSA_PSS_3072_SHA256","RSA_PSS_4096_SHA256","RSA_PKCS1_2048_SHA256","RSA_PKCS1_3072_SHA256","RSA_PKCS1_4096_SHA256"]
 allowed_algorithm_crypto_vt = ["RSA_SIGN_PSS_2048_SHA256", "RSA_SIGN_PSS_3072_SHA256", "RSA_SIGN_PSS_4096_SHA256", "RSA_SIGN_PKCS1_2048_SHA256", "RSA_SIGN_PKCS1_3072_SHA256", "RSA_SIGN_PKCS1_4096_SHA256"]
 
 # Get all Composer Instances
@@ -16,12 +16,17 @@ allCAPoolTfplanInstances = plan.find_resources("google_privateca_ca_pool")
 allCertAuthorityInstances = plan.find_resources("google_privateca_certificate_authority")
 allCryptoKeyTfplanInstances = plan.find_resources("google_kms_crypto_key")
 
+#print(allCAPoolTfstateInstances)
+
 array = {}
 for allCAPoolTfstateInstances as address, rc {
 	capoolname = tfstate.evaluate_attribute(rc, "name")
 	capooltier = tfstate.evaluate_attribute(rc, "tier")
 	array[capoolname] = capooltier
 }
+
+//print("-----Tfstate Map------")
+//print(array)
 
 array2 = {}
 for allCAPoolTfplanInstances as address, rc {
@@ -30,7 +35,11 @@ for allCAPoolTfplanInstances as address, rc {
 	array2[cpool_name] = cpool_tier
 
 }
+//print("-----TFPlan Map--------")
+//print(array2)
+
 array_main = {}
+
 for array as address, rc {
 	array_main[address] = rc
 }
@@ -39,14 +48,38 @@ for array2 as address, rc {
 	array_main[address] = rc
 }
 
+//print("-------Final Map after Merge--------")
+//print(array_main)
+b = 0
+c = 0
+for allCertAuthorityInstances as address, rc {
+
+	cert_pool_name = plan.evaluate_attribute(rc, "pool")
+	a = array_main[cert_pool_name]
+	b = a
+	c = cert_pool_name
+}
+//print("  ")
+print("pool name:---> " + c)
+print("pool tier:---> " + b)
+//print("  ")
+
+#######################################################
+####--------------Enterprise Rule-2-----------------###
+#######################################################
+
+
 find_resources = func(type) {
 	resources = filter tfstate2.resources as address, r {
 		r.type is type
 	}
+
 	return resources
 }
 
 allCryptoKeyTfstateInstances = find_resources("google_kms_crypto_key")
+
+//print(allCryptoKeyTfstateInstances)
 
 array_tfstate_cryptokey = {}
 for allCryptoKeyTfstateInstances as address, rc {
@@ -55,12 +88,16 @@ for allCryptoKeyTfstateInstances as address, rc {
 	array_tfstate_cryptokey[cryptokeyname] = cryptokeyalgorithm
 }
 
+//print(array_tfstate_cryptokey)
+
 array_tfplan_cryptokey = {}
 for allCryptoKeyTfplanInstances as address, rc {
 	crypto_plan_keyname = plan.evaluate_attribute(rc, "name")
 	crypto_plan_key_algorithm = plan.evaluate_attribute(rc, "version_template.0.algorithm")
 	array_tfplan_cryptokey[crypto_plan_keyname] = crypto_plan_key_algorithm
 }
+
+//print(array_tfplan_cryptokey)
 
 array_cryptokey_main = {}
 
@@ -71,30 +108,28 @@ for array_tfplan_cryptokey as address, rc {
 	array_cryptokey_main[address] = rc
 }
 
-b = 0
-c = 0
+//print(array_cryptokey_main)
+
 messages_algorithm = {}
-for allCertAuthorityInstances as address, rc {
+if (not (types.type_of(b) is "undefined") and b == "ENTERPRISE") {
+	for allCertAuthorityInstances as address, rc {
 
-	cert_pool_name = plan.evaluate_attribute(rc, "pool")
-	a = array_main[cert_pool_name]
-	b = a
-	c = cert_pool_name
-
-	//print("pool name:---> " + c)
-	//print("pool tier:---> " + b)
-
-	if (not (types.type_of(b) is "undefined") and b == "ENTERPRISE") {
 		kms_key_version = plan.evaluate_attribute(rc, "key_spec.0.cloud_kms_key_version")
+		//print("kms-value-->" + plan.to_string(kms_key_version))
+		//print("kms-key-version value--->" + types.type_of(kms_key_version))
 
 		if (kms_key_version == null) {
 			messages_algorithm[address] = rc
-			print("kms key version undefined, Please specify key_spec.0.cloud_kms_key_version attribute for resource: " + address)
+			print("kms key version undefined, Please specify key_spec.0.cloud_kms_key_version attribute for resource: "+address)
 		} else {
 			cryptoKeyName = strings.split(kms_key_version, "/")
+			//print(cryptoKeyName[7])
 			c_key_name = cryptoKeyName[7]
+			//print(array_cryptokey_main[c_key_name])
 			x = array_cryptokey_main[c_key_name]
+			//print(x)
 			is_x_undefined = rule { types.type_of(x) is "undefined" }
+			//print("is x undefined--->" + plan.to_string(is_x_undefined))
 
 			if is_x_undefined {
 				messages_algorithm[address] = rc
@@ -107,39 +142,36 @@ for allCertAuthorityInstances as address, rc {
 			}
 		}
 
-	} else {
-		if (types.type_of(b) is "undefined") {
-			messages = "CA Pool Tier Couldn't be Found"
-			print("CA Pool Tier Couldn't be Found for pool for resource: " + address)
-		}
+	}
+
+} else {
+    if (types.type_of(b) is "undefined") {
+	messages = "CA Pool Tier Couldn't be Found"
+	print("CA Pool Tier Couldn't be Found for pool for resource: "+address)
 	}
 }
 
 GCP_CAS_CAENTALG = rule { length(messages_algorithm) is 0 }
 
-#######################################################
-####--------------DEVOPS RULE-----------------------###
-#######################################################
 
+
+#=======================================================================
+#=======================================================================
 messages_algorithm_devops = {}
-for allCertAuthorityInstances as address, rc {
-	cert_pool_name_devops = plan.evaluate_attribute(rc, "pool")
-	a_devops = array_main[cert_pool_name_devops]
-
-	if (not (types.type_of(a_devops) is "undefined") and a_devops == "DEVOPS") {
-
-		ca_private_kms_algorithm = plan.evaluate_attribute(rc, "key_spec.0.algorithm")
-		if (ca_private_kms_algorithm not in allowed_algorithms_ca_spec or types.type_of(ca_private_kms_algorithm) is "undefined" or types.type_of(ca_private_kms_algorithm) is "null" or length(ca_private_kms_algorithm) == 0) {
+if (not (types.type_of(b) is "undefined") and b == "DEVOPS") {
+	for allCertAuthorityInstances as address, rc {
+      ca_private_kms_algorithm = plan.evaluate_attribute(rc, "key_spec.0.algorithm")
+      if (ca_private_kms_algorithm not in allowed_algorithms_ca_spec or types.type_of(ca_private_kms_algorithm) is "undefined" or types.type_of(ca_private_kms_algorithm) is "null" or length(ca_private_kms_algorithm) == 0 ){
 			messages_algorithm_devops[address] = rc
-			print("Algorithm must be defined for resource :- " + address + " .Allowed algorithm are: ", allowed_algorithms_ca_spec)
+			print("The algorithm you selected is not allowed. Allowed algorithm are", allowed_algorithms_ca_spec)
 		}
-	} else {
-		if (types.type_of(b) is "undefined") {
-			messages = "CA Pool Tier Couldn't be Found"
-			print("CA Pool Tier Couldn't be Found for pool for resource: " + address)
-		}
+    }
+} else {
+    if (types.type_of(b) is "undefined") {
+	messages = "CA Pool Tier Couldn't be Found"
+	print("CA Pool Tier Couldn't be Found for pool for resource: "+address)
 	}
-}
+} 
 
 GCP_CAS_CADEVOPSALG = rule { length(messages_algorithm_devops) is 0 }
 main = rule { GCP_CAS_CAENTALG and GCP_CAS_CADEVOPSALG }
