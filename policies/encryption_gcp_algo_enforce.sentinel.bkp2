@@ -1,7 +1,6 @@
 # Import common-functions/tfplan-functions/tfplan-functions.sentinel
 # with alias "plan"
 import "tfstate-functions" as tfstate
-import "tfconfig-functions" as tfconfig
 import "tfstate/v2" as tfstate2
 import "tfconfig/v2" as tfconfig2
 import "tfplan-functions" as plan
@@ -50,32 +49,21 @@ print("KMS_VERSION_CEYPTO_KEY_MAP:>>" + plan.to_string(tfconfig_kms_key_version)
 
 tfconfig_ca = {}
 for caInstancesTfconfig as address, rc {
-	if length(caInstancesTfconfig) != 0 {
 	ca_name = rc.config.certificate_authority_id.constant_value
-	//kms_key_version_tfconfig = tfconfig.evaluate_attribute(rc.config.key_spec[0].cloud_kms_key_version, "references")
-	kms_key_version_tfconfig = tfconfig.evaluate_attribute(rc.config.key_spec[0], "cloud_kms_key_version")
-	//print(kms_key_version_tfconfig.references[0])
-	is_kms_key_version_undefined = rule {types.type_of(kms_key_version_tfconfig) is "undefined"}
-	print(is_kms_key_version_undefined)
-	if not is_kms_key_version_undefined {
-	cryptoKeyVersionTfconfig = strings.split(kms_key_version_tfconfig.references[0], ".")
-    crypto_vers = cryptoKeyVersionTfconfig[2]
-    cryptokey_name_tfcon = tfconfig_kms_key_version[crypto_vers]
-    tfconfig_ca[ca_name] = cryptokey_name_tfcon
-	}
-	}
+	kms_key_version_tfconfig = rc.config.key_spec[0].cloud_kms_key_version.references[0]
+	cryptoKeyVersionTfconfig = strings.split(kms_key_version_tfconfig, ".")
+	crypto_vers = cryptoKeyVersionTfconfig[2]
+	cryptokey_name_tfcon = tfconfig_kms_key_version[crypto_vers]
+	tfconfig_ca[ca_name] = cryptokey_name_tfcon
 }
 
-print("CA-CRYPTOKEY-MAP:>>" + plan.to_string(tfconfig_ca))
+print("CA-CRYPTOKRY-MAP:>>" + plan.to_string(tfconfig_ca))
 
 tfconfig_cryptokey_algo = {}
 for cryptokeyInstancesTfconfig as address, rc {
 	crypto_name = rc.name
-	crypto_algo_tfconfig = tfconfig.evaluate_attribute(rc.config, "version_template")
-	is_crypto_algo_tfconfig_undefined = rule { types.type_of(crypto_algo_tfconfig) is "undefined"}
-	if not is_crypto_algo_tfconfig_undefined {
-         tfconfig_cryptokey_algo[crypto_name] = crypto_algo_tfconfig[0].algorithm.constant_value
-	}
+	crypto_algo_tfconfig = rc.config.version_template[0].algorithm.constant_value
+	tfconfig_cryptokey_algo[crypto_name] = crypto_algo_tfconfig
 }
 
 print("CRYPTOKRY_ALGO_MAP:>>" + plan.to_string(tfconfig_cryptokey_algo))
@@ -83,14 +71,9 @@ print("CRYPTOKRY_ALGO_MAP:>>" + plan.to_string(tfconfig_cryptokey_algo))
 tfconfig_cryptokey_protection = {}
 for cryptokeyInstancesTfconfig as address, rc {
 	crypto_name_pro = rc.name
-	//crypto_protection_tfconfig = rc.config.version_template[0].protection_level.constant_value
-	crypto_protection_tfconfig = tfconfig.evaluate_attribute(rc.config, "version_template")
-	//print("GGGG>"+plan.to_string(crypto_protection_tfconfig))
-	is_crypto_protection_tfconfig_undefined = rule {types.type_of(crypto_protection_tfconfig) is "undefined"}
-	if not is_crypto_protection_tfconfig_undefined {
-		protection = crypto_protection_tfconfig[0].protection_level.constant_value
-	tfconfig_cryptokey_protection[crypto_name_pro] = protection
-	}
+	crypto_protection_tfconfig = rc.config.version_template[0].protection_level.constant_value
+	print(crypto_protection_tfconfig)
+	tfconfig_cryptokey_protection[crypto_name_pro] = crypto_protection_tfconfig
 }
 
 print("CRYPTOKRY_PROTECTION_MAP:>>" + plan.to_string(tfconfig_cryptokey_protection))

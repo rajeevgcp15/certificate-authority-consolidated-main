@@ -220,63 +220,50 @@ for cryptokeyVersionInstancesTfconfig as address, rc {
 	crypto_key_version_name = strings.split(crypto_key_ref, ".")
 	tfconfig_kms_key_version[crypto_key_ver_name] = crypto_key_version_name[1]
 }
-print("XXX--KMS_VERSION_CEYPTO_KEY_MAP--XXX>>>>>" + plan.to_string(tfconfig_kms_key_version))
+print("KMS_VERSION_CRYPTO_KEY_MAP:>>" + plan.to_string(tfconfig_kms_key_version))
 
 tfconfig_ca = {}
 for caInstancesTfconfig as address, rc {
-	if length(caInstancesTfconfig) != 0 {
-		ca_name = rc.config.certificate_authority_id.constant_value
-		//kms_key_version_tfconfig = tfconfig.evaluate_attribute(rc.config.key_spec[0].cloud_kms_key_version, "references")
-		kms_key_version_tfconfig = tfconfig.evaluate_attribute(rc.config.key_spec[0], "cloud_kms_key_version")
-		//print(kms_key_version_tfconfig.references[0])
-		is_kms_key_version_undefined = rule { types.type_of(kms_key_version_tfconfig) is "undefined" }
-		print(is_kms_key_version_undefined)
-		if not is_kms_key_version_undefined {
-			cryptoKeyVersionTfconfig = strings.split(kms_key_version_tfconfig.references[0], ".")
-			crypto_vers = cryptoKeyVersionTfconfig[2]
-			cryptokey_name_tfcon = tfconfig_kms_key_version[crypto_vers]
-			tfconfig_ca[ca_name] = cryptokey_name_tfcon
-		}
-	}
+	ca_name = rc.config.certificate_authority_id.constant_value
+	kms_key_version_tfconfig = rc.config.key_spec[0].cloud_kms_key_version.references[0]
+	cryptoKeyVersionTfconfig = strings.split(kms_key_version_tfconfig, ".")
+	crypto_vers = cryptoKeyVersionTfconfig[2]
+	cryptokey_name_tfcon = tfconfig_kms_key_version[crypto_vers]
+	tfconfig_ca[ca_name] = cryptokey_name_tfcon
 }
-print("VVVV--CA-KEY-VERSION-MAP--VVVVVV>>>" + plan.to_string(tfconfig_ca))
+
+print("CA-CRYPTOKEY-MAP:>>" + plan.to_string(tfconfig_ca))
 
 tfconfig_cryptokey_algo = {}
 for cryptokeyInstancesTfconfig as address, rc {
 	crypto_name = rc.name
-	crypto_algo_tfconfig = tfconfig.evaluate_attribute(rc.config, "version_template")
-	is_crypto_algo_tfconfig_undefined = rule { types.type_of(crypto_algo_tfconfig) is "undefined"}
-	if not is_crypto_algo_tfconfig_undefined {
-         tfconfig_cryptokey_algo[crypto_name] = crypto_algo_tfconfig[0].algorithm.constant_value
-	}
+	crypto_algo_tfconfig = rc.config.version_template[0].algorithm.constant_value
+	tfconfig_cryptokey_algo[crypto_name] = crypto_algo_tfconfig
 }
 
-print("YYYYYY--CRYPTOKRY_ALGO_MAP--YYYYYYY>>>>" + plan.to_string(tfconfig_cryptokey_algo))
+print("CRYPTOKRY_ALGO_MAP:>>" + plan.to_string(tfconfig_cryptokey_algo))
 
 tfconfig_cryptokey_protection = {}
 for cryptokeyInstancesTfconfig as address, rc {
 	crypto_name_pro = rc.name
-	//crypto_protection_tfconfig = rc.config.version_template[0].protection_level.constant_value
-	crypto_protection_tfconfig = tfconfig.evaluate_attribute(rc.config, "version_template")
-	//print("GGGG>"+plan.to_string(crypto_protection_tfconfig))
-	is_crypto_protection_tfconfig_undefined = rule {types.type_of(crypto_protection_tfconfig) is "undefined"}
-	if not is_crypto_protection_tfconfig_undefined {
-		protection = crypto_protection_tfconfig[0].protection_level.constant_value
-	tfconfig_cryptokey_protection[crypto_name_pro] = protection
-	}
+	crypto_protection_tfconfig = rc.config.version_template[0].protection_level.constant_value
+	print(crypto_protection_tfconfig)
+	tfconfig_cryptokey_protection [crypto_name_pro] = crypto_protection_tfconfig
 }
 
-print("TTTTTTTT--CRYPTOKRY_PROTECTION_MAP--TTTTTTTT>>>>" + plan.to_string(tfconfig_cryptokey_protection))
+print("-CRYPTOKRY_PROTECTION_MAP:>>" + plan.to_string(tfconfig_cryptokey_protection))
 
 tfconfig_cryptokey_name_mapping = {}
 for cryptokeyInstancesTfconfig as address, rc {
 	crypto_name_tfcon = rc.name
 	crypto_name_actual = rc.config.name.constant_value
 	print(crypto_name_actual)
-	tfconfig_cryptokey_name_mapping[crypto_name_tfcon] = crypto_name_actual
+	tfconfig_cryptokey_name_mapping [crypto_name_tfcon] = crypto_name_actual
 }
 
-print("UUUUUUU--CRYPTOKRY_NAME_MAP--UUUUU>>>>" + plan.to_string(tfconfig_cryptokey_name_mapping))
+print("CRYPTOKRY_NAME_MAP:>>" + plan.to_string(tfconfig_cryptokey_name_mapping))
+
+
 
 #====================================================================
 
@@ -411,45 +398,40 @@ for allCertAuthorityInstances as address, rc {
 			if cmek_after_unknown == true {
 				ca_name = plan.evaluate_attribute(rc, "certificate_authority_id")
 				crypto_key_id_name = tfconfig_ca[ca_name]
-				print("TTTTTTTTT>>>" + plan.to_string(crypto_key_id_name))
+				//print("TTTTTTTTT>>>" + plan.to_string(crypto_key_id_name))
 				//cryptokey_algo_name = tfconfig_cryptokey_algo[crypto_key_id_name]
 				//print("SSSSSSSS>>>" + plan.to_string(cryptokey_algo_name))
 				crypto_key_protection_name = tfconfig_cryptokey_protection[crypto_key_id_name]
-				print("SSSSSSSS>>>" + plan.to_string(crypto_key_protection_name))
-				is_crypto_key_protection_name_undefined = rule { types.type_of(crypto_key_protection_name) is "undefined" }
-				if is_crypto_key_protection_name_undefined {
-					print("Protection level Undefined for cryptokey:" + tfconfig_cryptokey_name_mapping[crypto_key_id_name])
+				//print("SSSSSSSS>>>" + plan.to_string(crypto_key_protection_name))
+
+				if crypto_key_protection_name != "HSM" {
+					//print("Please select algorithm from following allowed algorithm list: " + allowed_algorithm)
+					print("Protection level must be HSM for the cryptokey:"+tfconfig_cryptokey_name_mapping[crypto_key_id_name])
 					messages[address] = rc
+				} 
 
-				} else {
-					if crypto_key_protection_name != "HSM" {
-						//print("Please select algorithm from following allowed algorithm list: " + allowed_algorithm)
-						print("Protection level must be HSM for the cryptokey:" + tfconfig_cryptokey_name_mapping[crypto_key_id_name])
-						messages[address] = rc
-					}
-				}
 			} else {
-				cryptoKeyName = strings.split(kms_key_version, "/")
-				print(cryptoKeyName[7])
-				c_key_name = cryptoKeyName[7]
-				print(array_cryptokey_main[c_key_name])
-				x = array_cryptokey_main[c_key_name]
-				print(x)
-				is_x_undefined = rule { types.type_of(x) is "undefined" }
-				print("is x undefined--->" + plan.to_string(is_x_undefined))
-				if (is_x_undefined or x is null) {
-					print("The cryptokey resource: " + plan.to_string(c_key_name) + "  must have version_template block enabled with protection_level= HSM for resource " + address)
-					messages_selfsign[address] = rc
-				} else {
-					if not (x == "HSM") {
-						print("The cryptokey resource: " + plan.to_string(c_key_name) + "  Must have version_template block with protection_level= HSM for resource " + address)
+					cryptoKeyName = strings.split(kms_key_version, "/")
+					print(cryptoKeyName[7])
+					c_key_name = cryptoKeyName[7]
+					print(array_cryptokey_main[c_key_name])
+					x = array_cryptokey_main[c_key_name]
+					print(x)
+					is_x_undefined = rule { types.type_of(x) is "undefined" }
+					print("is x undefined--->" + plan.to_string(is_x_undefined))
+					if (is_x_undefined or x is null) {
+						print("The cryptokey resource: " + plan.to_string(c_key_name) + "  must have version_template block enabled with protection_level= HSM for resource " + address)
 						messages_selfsign[address] = rc
+					} else {
+						if not (x == "HSM") {
+							print("The cryptokey resource: " + plan.to_string(c_key_name) + "  Must have version_template block with protection_level= HSM for resource " + address)
+							messages_selfsign[address] = rc
 
+						}
 					}
 				}
-			}
-
 		}
+
 	}
 }
 
