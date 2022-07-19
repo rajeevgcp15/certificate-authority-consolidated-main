@@ -10,6 +10,10 @@ module "generic-functions" {
     source = "../../../common-functions/generic-functions/generic-functions.sentinel"
 }
 
+module "tfconfig-functions" {
+     source = "../../../common-functions/tfconfig-functions/tfconfig-functions.sentinel"
+}
+
 mock "tfplan/v2" {
   module {
     source = "mock-tfplan-v2-caentcmek-null.sentinel"
@@ -18,6 +22,12 @@ mock "tfplan/v2" {
 mock "tfstate/v2" {
   module {
     source = "mock-tfstate-v2-caentcmek-null.sentinel"
+  }
+}
+
+mock "tfconfig/v2" {
+  module {
+    source = "./dummy-tfconfig.sentinel"
   }
 }
 

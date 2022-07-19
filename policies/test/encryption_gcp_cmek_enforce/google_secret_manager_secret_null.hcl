@@ -10,6 +10,10 @@ module "tfstate-functions" {
     source = "../../../common-functions/tfstate-functions/tfstate-functions.sentinel"
 }
 
+module "tfconfig-functions" {
+    source = "../../../common-functions/tfconfig-functions/tfconfig-functions.sentinel"
+}
+
 mock "tfstate/v2" {
   module {
     source = "./dummy-tfstate.sentinel"
@@ -19,6 +23,12 @@ mock "tfstate/v2" {
 mock "tfplan/v2" {
   module {
     source = "mock-tfplan-google_secret_manager_secret-null.sentinel"
+  }
+}
+
+mock "tfconfig/v2" {
+  module {
+    source = "./dummy-tfconfig.sentinel"
   }
 }
 

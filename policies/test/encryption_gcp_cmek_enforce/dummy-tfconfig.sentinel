@@ -1,0 +1,38 @@
+import "strings"
+
+providers = {
+	"google": {
+		"alias": "",
+		"config": {
+			"project": {
+				"constant_value": "modular-scout-345114",
+			},
+			"region": {
+				"constant_value": "us-central1",
+			},
+		},
+		"module_address":      "",
+		"name":                "google",
+		"provider_config_key": "google",
+		"version_constraint":  "",
+	},
+	"google-beta": {
+		"alias": "",
+		"config": {
+			"project": {
+				"constant_value": "modular-scout-345114",
+			},
+			"region": {
+				"constant_value": "us-central1",
+			},
+		},
+		"module_address":      "",
+		"name":                "google-beta",
+		"provider_config_key": "google-beta",
+		"version_constraint":  "",
+	},
+}
+
+resources = {}
+
+provisioners = {}

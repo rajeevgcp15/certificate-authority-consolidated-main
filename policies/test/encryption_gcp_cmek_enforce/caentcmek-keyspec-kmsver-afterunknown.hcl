@@ -2,12 +2,12 @@ module "tfplan-functions" {
   source = "../../../common-functions/tfplan-functions/tfplan-functions.sentinel"
 }
 
-module "generic-functions" {
-    source = "../../../common-functions/generic-functions/generic-functions.sentinel"
-}
-
 module "tfstate-functions" {
     source = "../../../common-functions/tfstate-functions/tfstate-functions.sentinel"
+}
+
+module "generic-functions" {
+    source = "../../../common-functions/generic-functions/generic-functions.sentinel"
 }
 
 module "tfconfig-functions" {
@@ -16,23 +16,23 @@ module "tfconfig-functions" {
 
 mock "tfplan/v2" {
   module {
-    source = "mock-tfplan-google_storage_bucket-null.sentinel"
+    source = "mock-tfplan-v2-caentcmek-keyspec-kmsver-afterunknown.sentinel"
+  }
+}
+mock "tfstate/v2" {
+  module {
+    source = "mock-tfstate-v2-caentcmek-keyspec-kmsver-afterunknown.sentinel"
   }
 }
 
-mock "tfstate/v2" {
-  module {
-    source = "./dummy-tfstate.sentinel"
-  }
-}
 mock "tfconfig/v2" {
   module {
-    source = "./dummy-tfconfig.sentinel"
+    source = "mock-tfconfig-v2-caentcmek-keyspec-kmsver-afterunknown.sentinel"
   }
 }
 
 test {
   rules = {
-    main = false
+    main = true
   }
 }

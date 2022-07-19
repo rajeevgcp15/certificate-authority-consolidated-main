@@ -1,0 +1,41 @@
+id = "run-zUyoQqA1MaDH98Ue"
+created_at = "2022-07-18T07:05:21.793Z"
+message = "Test run "
+commit_sha = "a1b7ff63f22281217614775ac7889e8de2c32abc"
+speculative = true
+is_destroy = false
+refresh = true
+refresh_only = false
+replace_addrs = null
+target_addrs = null
+
+variables = {
+	"GOOGLE_CREDENTIALS": {
+		"category":  "terraform",
+		"sensitive": false,
+	},
+	"GOOGLE_OAUTH_ACCESS_TOKEN": {
+		"category":  "env",
+		"sensitive": true,
+	},
+}
+
+organization = {
+	"name": "www-Test101",
+}
+
+workspace = {
+	"auto_apply":  false,
+	"created_at":  "2022-07-16T08:21:24.604Z",
+	"description": "nemalipurianurag/certificateauthority-enterprise",
+	"id":          "ws-pGURVWXFkwtTRZ8L",
+	"name":        "certificateauthority-enterprise",
+	"tags":        [],
+	"vcs_repo": {
+		"branch":             "",
+		"display_identifier": "nemalipurianurag/certificateauthority-enterprise",
+		"identifier":         "nemalipurianurag/certificateauthority-enterprise",
+		"ingress_submodules": false,
+	},
+	"working_directory": "",
+}
