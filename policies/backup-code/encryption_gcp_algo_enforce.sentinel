@@ -18,7 +18,6 @@ allCAPoolTfplanInstances = plan.find_resources("google_privateca_ca_pool")
 allCertAuthorityInstances = plan.find_resources("google_privateca_certificate_authority")
 allCryptoKeyTfplanInstances = plan.find_resources("google_kms_crypto_key")
 
-#=================function for tfstate ============================================
 find_resources = func(type) {
 	resources = filter tfstate2.resources as address, r {
 		r.type is type
@@ -26,7 +25,7 @@ find_resources = func(type) {
 	return resources
 }
 
-#=================function for tfconfig ============================================
+#==========================================================================================
 find_resources_tfconfig = func(type) {
 	resources = filter tfconfig2.resources as address, r {
 		r.type is type
@@ -47,14 +46,17 @@ for cryptokeyVersionInstancesTfconfig as address, rc {
 	crypto_key_version_name = strings.split(crypto_key_ref, ".")
 	tfconfig_kms_key_version[crypto_key_ver_name] = crypto_key_version_name[1]
 }
-//print("KMS_VERSION_CEYPTO_KEY_MAP:>>" + plan.to_string(tfconfig_kms_key_version))
+print("KMS_VERSION_CEYPTO_KEY_MAP:>>" + plan.to_string(tfconfig_kms_key_version))
 
 tfconfig_ca = {}
 for caInstancesTfconfig as address, rc {
 	if length(caInstancesTfconfig) != 0 {
 	ca_name = rc.config.certificate_authority_id.constant_value
+	//kms_key_version_tfconfig = tfconfig.evaluate_attribute(rc.config.key_spec[0].cloud_kms_key_version, "references")
 	kms_key_version_tfconfig = tfconfig.evaluate_attribute(rc.config.key_spec[0], "cloud_kms_key_version")
+	//print(kms_key_version_tfconfig.references[0])
 	is_kms_key_version_undefined = rule {types.type_of(kms_key_version_tfconfig) is "undefined"}
+	print(is_kms_key_version_undefined)
 	if not is_kms_key_version_undefined {
 	cryptoKeyVersionTfconfig = strings.split(kms_key_version_tfconfig.references[0], ".")
     crypto_vers = cryptoKeyVersionTfconfig[2]
@@ -64,7 +66,7 @@ for caInstancesTfconfig as address, rc {
 	}
 }
 
-//print("CA-CRYPTOKEY-MAP:>>" + plan.to_string(tfconfig_ca))
+print("CA-CRYPTOKEY-MAP:>>" + plan.to_string(tfconfig_ca))
 
 tfconfig_cryptokey_algo = {}
 for cryptokeyInstancesTfconfig as address, rc {
@@ -76,12 +78,14 @@ for cryptokeyInstancesTfconfig as address, rc {
 	}
 }
 
-//print("CRYPTOKRY_ALGO_MAP:>>" + plan.to_string(tfconfig_cryptokey_algo))
+print("CRYPTOKRY_ALGO_MAP:>>" + plan.to_string(tfconfig_cryptokey_algo))
 
 tfconfig_cryptokey_protection = {}
 for cryptokeyInstancesTfconfig as address, rc {
 	crypto_name_pro = rc.name
+	//crypto_protection_tfconfig = rc.config.version_template[0].protection_level.constant_value
 	crypto_protection_tfconfig = tfconfig.evaluate_attribute(rc.config, "version_template")
+	//print("GGGG>"+plan.to_string(crypto_protection_tfconfig))
 	is_crypto_protection_tfconfig_undefined = rule {types.type_of(crypto_protection_tfconfig) is "undefined"}
 	if not is_crypto_protection_tfconfig_undefined {
 		protection = crypto_protection_tfconfig[0].protection_level.constant_value
@@ -89,17 +93,17 @@ for cryptokeyInstancesTfconfig as address, rc {
 	}
 }
 
-//print("CRYPTOKRY_PROTECTION_MAP:>>" + plan.to_string(tfconfig_cryptokey_protection))
+print("CRYPTOKRY_PROTECTION_MAP:>>" + plan.to_string(tfconfig_cryptokey_protection))
 
 tfconfig_cryptokey_name_mapping = {}
 for cryptokeyInstancesTfconfig as address, rc {
 	crypto_name_tfcon = rc.name
 	crypto_name_actual = rc.config.name.constant_value
-	//print(crypto_name_actual)
+	print(crypto_name_actual)
 	tfconfig_cryptokey_name_mapping[crypto_name_tfcon] = crypto_name_actual
 }
 
-//print("CRYPTOKRY_NAME_MAP:>>" + plan.to_string(tfconfig_cryptokey_name_mapping))
+print("CRYPTOKRY_NAME_MAP:>>" + plan.to_string(tfconfig_cryptokey_name_mapping))
 
 #===============================================================================================
 
@@ -161,6 +165,9 @@ for allCertAuthorityInstances as address, rc {
 	b = a
 	c = cert_pool_name
 
+	//print("pool name:---> " + c)
+	//print("pool tier:---> " + b)
+
 	if (not (types.type_of(b) is "undefined") and b == "ENTERPRISE") {
 		kms_key_version = plan.evaluate_attribute(rc, "key_spec.0.cloud_kms_key_version")
 		cmek_after_unknown = plan.evaluate_attribute(rc.change.after_unknown, "key_spec.0.cloud_kms_key_version")
@@ -172,9 +179,15 @@ for allCertAuthorityInstances as address, rc {
 			if cmek_after_unknown == true {
 				ca_name = plan.evaluate_attribute(rc, "certificate_authority_id")
 				crypto_key_id_name = tfconfig_ca[ca_name]
+				//print("TTTTTTTTT>>>" + plan.to_string(crypto_key_id_name))
 				cryptokey_algo_name = tfconfig_cryptokey_algo[crypto_key_id_name]
+				//print("SSSSSSSS>>>" + plan.to_string(cryptokey_algo_name))
+				//crypto_key_protection_name = tfconfig_cryptokey_protection[crypto_key_id_name]
+				//print("SSSSSSSS>>>" + plan.to_string(crypto_key_protection_name))
+
 				if cryptokey_algo_name not in allowed_algorithm_crypto_vt {
 					print("Please select algorithm from following allowed algorithm list for cryptokey: "+plan.to_string(tfconfig_cryptokey_name_mapping[crypto_key_id_name]) +".Allowed algorithms are: "+plan.to_string(allowed_algorithm_crypto_vt))
+					//print("Protection level must be HSM for the cryptokey:" + tfconfig_cryptokey_name_mapping[crypto_key_id_name])
 					messages_algorithm[address] = rc
 				}
 
